@@ -10,9 +10,9 @@ class Pessoa:
 
 
     def cumprimentar(self):
-        print("olá")
+        return "olá, sou uma pessoa"
 
-    def _acenar():
+    def _acenar(self):
         pass
 
     @staticmethod
@@ -23,6 +23,11 @@ class Pessoa:
     def metodo_de_classe(cls):
         return cls.olhos + cls.pernas 
 
+class Homem(Pessoa):
+
+    def cumprimentar(self):
+        return f'{super().cumprimentar()} do sexo masculino' #Uso o super quando quero usar um comportamento da classe Pai sem alterá-lo
+
 
 if __name__ == "__main__":
     print("oi")
@@ -32,22 +37,5 @@ if __name__ == "__main__":
     print(luciano.metodo_estatico(1,2))
     print(luciano.metodo_de_classe())
     print(Pessoa.metodo_de_classe())
-
-
-    for filho in luciano.filhos:
-        print(filho.nome)
-        print(filho.olhos)
-
-
-class Opcao:
-    def __init__(self):
-        self.premio = premio
-        self.vencimento = vencimento
-        self.ativo = None
-        self.vencimento = None
-
-
-
-
-
-
+    Diego = Homem()
+    print(Diego.cumprimentar())

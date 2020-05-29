@@ -42,10 +42,10 @@ class Carro:
         self.motor.frear()
 
     def girar_a_esquerda(self):
-        return self.direcao.girar_a_esquerda()
+        self.direcao.girar_a_esquerda()
 
     def girar_a_direita(self):
-        return self.direcao.girar_a_direita()
+        self.direcao.girar_a_direita()
 
 
 
